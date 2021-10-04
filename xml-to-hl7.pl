@@ -3,8 +3,8 @@ use File::Copy;
     #use strict;
     #use warnings;
 
-    $dir = 'C:\Documents and Settings\cn136.ECRMC\My Documents\el-centro\mmodel\txt_files';
-    #$dir = 'C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-centro\mmodel\\txt_files\\';
+    $dir = 'C:\Documents and Settings\cn136.ECRMC\My Documents\el-client-site\mmodel\txt_files';
+    #$dir = 'C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-client-site\mmodel\\txt_files\\';
     #$dir = 'C:\MModalSignedDocs';
 
     # $dir = 'C:\Perl\Bin';
@@ -49,7 +49,7 @@ printf "$inFile\n";
 
 
 #--inFile path---------------
-$inFileRead = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-centro\mmodel\\txt_files\\";
+$inFileRead = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-client-site\mmodel\\txt_files\\";
 $inFileRead .= $inFile;
 
 
@@ -66,14 +66,14 @@ $year = $year + 1900; # Add 1900 to the year;
 $cnow = sprintf ("%04d%02d%02d%02d%02d",$year,$month,$day,$hour,$min);  
 
 $outlog = "Processed: " . $inFile. " @ " . $cnow . "\n";
-$log = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-centro\mmodel\\txt_files\\";
+$log = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-client-site\mmodel\\txt_files\\";
 $log .= "log.data";
  open(HIST, ">> $log") ; #|| die "cannot write $file in ",__FILE__," line ",__LINE__, "\n";
     print HIST $outlog;
     close(HIST);
 
 #--outfile path---------------
-$outFile = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-centro\mmodel\\txt_files\\";
+$outFile = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-client-site\mmodel\\txt_files\\";
 $outFile .= $inFile . ".hl7";
 
 $seq = "";
@@ -284,7 +284,7 @@ close(INFILE);
 
 #--delete source txt file --------------------------------
 
-$del_files = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-centro\mmodel\\txt_files\\" . $inFile;
+$del_files = "C:\\Documents and Settings\\cn136.ECRMC\\My Documents\\el-client-site\mmodel\\txt_files\\" . $inFile;
 printf "$del_files\n"; 
 unlink("$del_files");
 
